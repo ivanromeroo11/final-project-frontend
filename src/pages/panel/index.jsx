@@ -1,19 +1,20 @@
+import { useProducts } from "../../hooks/useProducts";
 
 
 const Panel = () => {
-    return (
-        <section>
-         <h1>Bienvenido a la mejor pagina de componentes</h1>
-          <section>
-            <div className="tarjetas">Tarjetas Gráficas</div>
-            <div className="procesadores">Procesadores</div>
-            <div className="ventilacion">Ventilación</div>
-            <div className="placas">Placas Base</div>
-            <div className="discos">Discos duros</div>
-            <div className="productos">Todos los productos</div>
-          </section>
-        </section>
-    )
-}
 
+const { data } = useProducts()
+console.log('>estoy en panel ', data?.products)
+
+  
+return (
+  <>
+<h1>Bienvenido a la mejor pagina de componentes</h1>
+
+{ data?.products.map((products) => 
+ <p key={products.id}>{products.name}</p>)}
+  </>
+)
+ 
+}
 export default Panel;

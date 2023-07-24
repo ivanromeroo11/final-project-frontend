@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { login } from './auth';
 import { info } from './user';
+import { productos } from './productos';
+
 
 
 
@@ -16,6 +18,11 @@ const auth = {
 const user = {
     info: info(client),
 };
- 
 
-export { auth, user, };
+const produc = {
+    productos: productos(client),
+};
+
+
+
+export { auth, user, produc };

@@ -1,4 +1,4 @@
-/* Navbar.css */
+
 
 body {
     margin: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #007bff; /* Color azul */
+    background-color: #007bff; 
     padding: 10px;
 }
 
@@ -23,7 +23,7 @@ header {
 }
 
 .navbar li a {
-    color: #fff; /* Texto en color blanco */
+    color: #fff; 
     text-decoration: none;
     padding: 5px 10px;
 }

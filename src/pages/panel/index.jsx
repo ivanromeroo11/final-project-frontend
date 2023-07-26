@@ -1,6 +1,6 @@
 import { useProducts } from "../../hooks/useProducts";
 import Navegacion from "../../components/navbard";
-
+import './style.css'
 
 
 const Panel = () => {

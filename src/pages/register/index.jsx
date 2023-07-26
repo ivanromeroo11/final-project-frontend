@@ -3,6 +3,7 @@ import { login } from '../../misc/templates';
 import { useRegister, useUser } from '../../hooks'
 import { useEffect } from 'react';
 import { useLocation } from 'wouter'
+import './style.css'
 
 
 
@@ -33,19 +34,19 @@ const Register = () => {
             <form onSubmit={handleSubmit(doRegister)}>
                 <label htmlFor="email">email</label>
                 <br />
-                <input {...{...email.props, ...register("email", email.validation) }}
+                <input className='input' {...{...email.props, ...register("email", email.validation) }}
                  />
                 <p>{errors[formState.errors?.email?.type]}</p>
 
                 <label htmlFor="username">username</label>
                 <br />
-                <input {...{...username.props, ...register("username", username.validation) }} 
+                <input className='input' {...{...username.props, ...register("username", username.validation) }} 
                 />
                 <p>{errors[formState.errors?.username?.type]}</p>
 
                 <label htmlFor="password">password</label>
                 <br />
-                <input {...{...password.props, ...register("password", password.validation)} }
+                <input className='input' {...{...password.props, ...register("password", password.validation)} }
                  />
                 <p>{errors[formState.errors?.password?.type]}</p>
 
